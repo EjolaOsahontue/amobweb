@@ -6,6 +6,16 @@
 <title>AMOB District - Shop</title>
 
 <style>
+/* Import custom font */
+@font-face {
+    font-family: 'FormaDJRBanner';
+    src: url('FormaDJRBanner-Black-Testing.woff2') format('woff2'),
+         url('FormaDJRBanner-Black-Testing.woff') format('woff'),
+         url('FormaDJRBanner-Black-Testing.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -92,17 +102,17 @@ body {
 /* Instructions */
 #instructions {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 15px 30px;
-    border-radius: 10px;
     font-size: 14px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.3);
     z-index: 100;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 8px rgba(255,255,255,0.7);
+    font-family: 'FormaDJRBanner', Arial, sans-serif;
+    font-weight: 900;
 }
 
 /* Left item */
@@ -133,8 +143,7 @@ body {
 @media (max-width: 768px) {
     #instructions {
         font-size: 12px;
-        padding: 10px 20px;
-        bottom: 10px;
+        top: 10px;
     }
 
     .hotspot-label {
