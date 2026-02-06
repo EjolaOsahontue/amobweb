@@ -38,18 +38,33 @@ body {
     display: block;
 }
 
+/* ===== BEAMING ANIMATION (NO GLOW) ===== */
+@keyframes beam {
+    0% {
+        border-color: rgba(255,255,255,0.3);
+    }
+    50% {
+        border-color: white;
+    }
+    100% {
+        border-color: rgba(255,255,255,0.3);
+    }
+}
+
 /* Clickable hotspots */
 .hotspot {
     position: absolute;
     cursor: pointer;
     transition: all 0.3s ease;
     border: 2px solid rgba(255,255,255,0.3);
+    animation: beam 2s infinite ease-in-out;
 }
 
-/* REMOVE BOX ON HOVER — KEEP MINIMAL GLOW */
+/* Stop beam on hover */
 .hotspot:hover {
-    border: 2px solid white;
-    transform: scale(1.03);
+    transform: scale(1);
+    animation: none;
+    border-color: white;
 }
 
 /* LABEL — WHITE TEXT ONLY (NO BOX) */
